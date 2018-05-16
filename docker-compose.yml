@@ -1,0 +1,8 @@
+version: '2.1'
+
+services:
+  burkes-heart:
+    image: burkes-heart
+    build: .
+    ports:
+      - 3000:80
