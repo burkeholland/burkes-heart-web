@@ -35,8 +35,11 @@ function getConnectionInfo() {
 }
 
 function formatDate(d) {
+  // get users timezone offset
+  let offset = new Date().getTimezoneOffset();
+
   return moment(d)
-    .add(-5, 'hours')
+    .subtract(offset, 'minutes')
     .format('LLL');
 }
 
