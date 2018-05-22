@@ -39,7 +39,6 @@ function formatDate(d) {
   let offset = new Date().getTimezoneOffset();
 
   return moment(d)
-    .subtract(offset, 'minutes')
     .format('LLL');
 }
 
